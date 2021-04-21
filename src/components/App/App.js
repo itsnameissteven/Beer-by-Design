@@ -1,5 +1,6 @@
 
 import React, {useState, useEffect} from 'react';
+import { FeaturedBeers } from '../FeaturedBeers/FeaturedBeers'
 import { getAPIs } from '../../apiCalls.js'
 import './App.css';
 
@@ -12,9 +13,9 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
-      <header className="App-header">
-      </header>
+    <div className="app">
+      <h1 className="app__header">Beers by design</h1>
+      <FeaturedBeers beerList={beerList.slice(0, 3)} />
     </div>
   );
 }
