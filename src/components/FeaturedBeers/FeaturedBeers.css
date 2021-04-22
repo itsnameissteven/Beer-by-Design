@@ -1,4 +1,35 @@
 .featured-beers {
-  border: 2px solid red;
   grid-column: 1/3;
+}
+
+.beer-card {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  grid-template-rows: min-content min-content auto;
+  border: 2px solid grey;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 30px;
+  min-height: 200px;
+  text-align: left;
+  box-shadow: -2px 5px 9px rgba(0, 0, 0, 0.2);
+}
+
+.beer-card__name,
+.beer-card__tagline {
+  grid-column: 1;
+}
+
+.beer-card__description,
+.beer-card__btn {
+  grid-column: 2;
+}
+
+.beer-card__description {
+  grid-row: 1/3;
+}
+
+.beer-card__btn {
+  align-self: end;
+  justify-self: end;
 }

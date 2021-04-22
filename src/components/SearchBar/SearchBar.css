@@ -1,0 +1,10 @@
+.search {
+  grid-column: 1/-1;
+}
+
+.search__input {
+  width: 80%;
+  height: 50px;
+  border: 2px solid grey;
+  border-radius: 500px;
+}
