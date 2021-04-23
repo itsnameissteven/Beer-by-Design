@@ -1,8 +1,10 @@
-
 import React, {useState, useEffect} from 'react';
-import { FeaturedBeers } from '../FeaturedBeers/FeaturedBeers'
+import { Switch, Route, } from 'react-router-dom';
+import { FeaturedBeers } from '../FeaturedBeers/FeaturedBeers';
 import { SearchBar } from '../SearchBar/SearchBar';
-import { getAPIs } from '../../apiCalls.js'
+import { SearchResults } from '../SearchResults/SearchResults';
+import { Recipe } from '../Recipe/Recipe';
+import { getAPIs } from '../../apiCalls.js';
 import './App.css';
 
 
@@ -15,9 +17,24 @@ function App() {
 
   return (
     <div className="app">
-      <h1 className="app__header">Brew by Design</h1>
+      <div className='container'>
+        <h1 className="app__header">Brew by Design</h1>
+      </div>
       <SearchBar />
-      <FeaturedBeers beerList={beerList.slice(0, 3)} />
+      <Switch>
+        <Route path="/" exact render={() => { 
+            return <FeaturedBeers beerList={beerList.slice(0, 3)} />
+        }}  
+        />
+        <Route path="/search/:search" render={({ match }) => {
+          const {search} = match.params;
+          return <SearchResults query={search.trim().replace(/ /g, "_")}/>;
+        }} />
+        <Route path="/recipe/:id" render={({ match }) => {
+          const { id } = match.params
+          return <Recipe id={id}/>
+        }} />
+      </Switch> 
     </div>
   );
 }
