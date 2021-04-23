@@ -7,12 +7,12 @@ export const SearchBar = ({updateSearch}) => {
   const [search, setSearch] = useState('')
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    updateSearch(search)
+    e.preventDefault();
+    setSearch('');
   }
 
   return (
-    <form className='search' action={`/search/${search.trim()}`} onSubmit={handleSubmit}>
+    <form className='search' onSubmit={handleSubmit}>
       <div className="search__container">
         <AiOutlineSearch className="search__icon"/>
         <input
@@ -25,6 +25,7 @@ export const SearchBar = ({updateSearch}) => {
         />
         <AiOutlineClose className="search__clear" />
       </div>
+      <Link to={"/search/" + search}><button onClick={() => setSearch('')}></button></Link>
     </form>
   )
 }
