@@ -9,6 +9,10 @@ export const searchAPI = (query) => {
     .then(response => response.json()).then(data => cleanData(data))
 }
 
+export const getSingleBeer = (id) => {
+  return fetch(`${baseURL}/${query}`).then(response => response.json())
+}
+
 const cleanData = (apiData) => {
   return apiData.map(data => {
     const hops = data.ingredients.hops.map(ingredient => ingredient.name)
