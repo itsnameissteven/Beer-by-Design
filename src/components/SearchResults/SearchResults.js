@@ -1,10 +1,14 @@
 import React, { useState, useEffect} from 'react';
-
+import { searchAPI } from '../../apiCalls';
 
 export const SearchResults = ({ query }) => {
   const [searchResults, setSearchResults] = useState([]);
-  useEffect(() => {
 
-  }, [])
-  return <h1> hi</h1>
+  const beers = searchResults.map(result => <h1>{result.name}</h1>)
+  useEffect(() => {
+    // console.log("search api")
+    searchAPI(query).then(data => setSearchResults(data));
+  }, [query])
+
+  return <div>{beers}</div>
 }
