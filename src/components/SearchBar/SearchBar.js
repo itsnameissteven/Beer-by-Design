@@ -6,13 +6,8 @@ import './SearchBar.css';
 export const SearchBar = ({updateSearch}) => {
   const [search, setSearch] = useState('')
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSearch('');
-  }
-
   return (
-    <form className='search' onSubmit={handleSubmit}>
+    <form className='search' onSubmit={(e) => e.preventDefault()}>
       <div className="search__container">
         <AiOutlineSearch className="search__icon"/>
         <input
@@ -23,9 +18,9 @@ export const SearchBar = ({updateSearch}) => {
           placeholder="Search for a beer recipe"
           onChange={(e) => setSearch(e.target.value)}
         />
-        <AiOutlineClose className="search__clear" />
+        {search && <AiOutlineClose className="search__clear" onClick={() => setSearch('')}/>}
       </div>
-      <Link to={"/search/" + search}><button onClick={() => setSearch('')}></button></Link>
+      <Link to={"/search/" + search} className="search__btn"><button onClick={() => setSearch('')}/></Link>
     </form>
   )
 }

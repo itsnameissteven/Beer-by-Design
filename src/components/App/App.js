@@ -3,7 +3,8 @@ import React, {useState, useEffect} from 'react';
 import { Switch, Route, Redirect,Link } from 'react-router-dom';
 import { FeaturedBeers } from '../FeaturedBeers/FeaturedBeers';
 import { SearchBar } from '../SearchBar/SearchBar';
-import { getAPIs } from '../../apiCalls.js'
+import { SearchResults } from '../SearchResults/SearchResults';
+import { getAPIs } from '../../apiCalls.js';
 import './App.css';
 
 
@@ -29,7 +30,8 @@ function App() {
         }}  
         />
         <Route path="/search/:search" render={({ match }) => {
-          return <Link to='/' ><h1>hey boo boo</h1></Link>
+          console.log(match.params.search.trim().replace(/ /g, "_"))
+          return <SearchResults />
         }} />
       </Switch>
       
