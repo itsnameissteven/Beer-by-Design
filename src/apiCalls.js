@@ -1,8 +1,10 @@
+const baseURL = 'https://api.punkapi.com/v2/beers'
+
 export const getAPIs = () => {
-  return fetch('https://api.punkapi.com/v2/beers')
-            .then(response => response.json());
+  return fetch(baseURL).then(response => response.json());
 }
 
-export const searchAPI = () => {
-  return fetch('https://api.punkapi.com/v2/beers?')
+export const searchAPI = (query) => {
+  return fetch(`${baseURL}?beer_name=${query}`)
+    .then(response => response.json());
 }

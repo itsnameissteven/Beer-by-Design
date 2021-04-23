@@ -30,8 +30,8 @@ function App() {
         }}  
         />
         <Route path="/search/:search" render={({ match }) => {
-          console.log(match.params.search.trim().replace(/ /g, "_"))
-          return <SearchResults />
+          const {search} = match.params;
+          return <SearchResults query={search.trim().replace(/ /g, "_")}/>;
         }} />
       </Switch>
       
