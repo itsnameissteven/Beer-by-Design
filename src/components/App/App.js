@@ -16,7 +16,9 @@ function App() {
 
   return (
     <div className="app">
-      <h1 className="app__header">Brew by Design</h1>
+      <div className='container'>
+        <h1 className="app__header">Brew by Design</h1>
+      </div>
       <SearchBar />
       <Switch>
         <Route path="/" exact render={() => { 

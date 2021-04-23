@@ -6,5 +6,20 @@ export const getAPIs = () => {
 
 export const searchAPI = (query) => {
   return fetch(`${baseURL}?beer_name=${query}`)
-    .then(response => response.json());
+    .then(response => response.json()).then(data => cleanData(data))
+}
+
+const cleanData = (apiData) => {
+  return apiData.map(data => {
+    const hops = data.ingredients.hops.map(ingredient => ingredient.name)
+    return {
+      id: data.id,
+      name: data.name,
+      description: data.description,
+      abv: data.abv,
+      ibu: data.ibu,
+      srm: data.srm,
+      hops: [...new Set(hops)]
+    }
+  })
 }

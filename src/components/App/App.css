@@ -3,12 +3,26 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 25%;
 }
-.app__header {
+
+.container {
   grid-column: 1/-1;
   height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(202, 202, 202);
+  background-color: rgb(65, 65, 65);
+}
+
+.app__header {
+  display: inline;
+  color: transparent;
+  justify-self: center;
+  /* display: flex; */
+  /* justify-content: center; */
+  background-image: url("../../assets/Rail_Header_3-21.jpeg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-clip: text;
+  background-color: white;
+  /* align-items: center; */
   font-size: 50px;
+  font-family: "Gravitas One", cursive;
 }
