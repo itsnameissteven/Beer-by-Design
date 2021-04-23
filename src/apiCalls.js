@@ -10,7 +10,7 @@ export const searchAPI = (query) => {
 }
 
 export const getSingleBeer = (id) => {
-  return fetch(`${baseURL}/${query}`).then(response => response.json())
+  return fetch(`${baseURL}/${id}`).then(response => response.json())
 }
 
 const cleanData = (apiData) => {
