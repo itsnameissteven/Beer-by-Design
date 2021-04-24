@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getSingleBeer } from '../../apiCalls';
 import { Ingredients } from '../Ingredients/Ingredients'
-// import { GiWheat, GiHops, GiDna2} from "react-icons/gi"
+import { TargetData } from '../TargetData/TargetData'
 import './Recipe.css'
 
 export const Recipe = ({ id }) => {
@@ -24,7 +24,23 @@ export const Recipe = ({ id }) => {
         <h3 className="recipe__about__header">ABOUT THIS BEER</h3>
         <p className="recipe__about__description">{recipe.description}</p>
       </div>
-      <Ingredients ingredients={recipe.ingredients} />
+      <div className="recipe__ingredients">
+        <h2>Ingredients</h2>
+        <Ingredients ingredients={recipe.ingredients} />
+      </div>
+      <div className="recipe__target-data">
+        <h2>Overview</h2>
+        <TargetData 
+          volume={recipe.volume}
+          boilVolume={recipe.boil_volume}
+          abv={recipe.abv}
+          ibu={recipe.ibu}
+          srm={recipe.srm}
+          finalGravity={recipe.target_fg}
+          originalGravity={recipe.target_og}
+          attenuation={recipe.attenuation_level}
+        />
+      </div>
     </div>
   )
 }

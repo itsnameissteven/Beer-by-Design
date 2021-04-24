@@ -2,6 +2,7 @@
   grid-column: 1/-1;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 25%;
+  grid-auto-rows: min-content;
 }
 
 .recipe__name {
@@ -47,4 +48,12 @@
 
 .recipe__about__description {
   padding: 10px;
+}
+
+.recipe__ingredients {
+  grid-row: span 2;
+}
+
+.recipe__target-data {
+  grid-column: 1;
 }

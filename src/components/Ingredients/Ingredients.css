@@ -1,7 +1,7 @@
 .ingredients {
-  grid-row: span 2;
   padding: 10px 5px;
   background-color: pink;
+  height: 100%;
 }
 
 .malt__row,

@@ -1,0 +1,20 @@
+.target {
+  background-color: aquamarine;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.target__data {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+}
+
+.target__data__name {
+  text-transform: uppercase;
+  font-weight: bold;
+}

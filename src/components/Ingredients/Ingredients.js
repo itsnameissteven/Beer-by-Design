@@ -9,7 +9,7 @@ export const Ingredients = ({ ingredients }) => {
     return num.toFixed(1);
   }
 
-  const malts = ingredients.malt.map((ingredient, index) => {
+  const malts = ingredients?.malt.map((ingredient, index) => {
     const weight = convertToPounds(ingredient.amount.value)
     return (
       <tr className='malt__row' key={index}>
@@ -20,7 +20,7 @@ export const Ingredients = ({ ingredients }) => {
     )
   })
 
-  const hops = ingredients.hops.map((ingredient, index) => {
+  const hops = ingredients?.hops.map((ingredient, index) => {
     return (
       <tr className='hop__row' key={index}>
         <td className='ingredient-name'>{ingredient.name}</td>
@@ -69,7 +69,7 @@ export const Ingredients = ({ ingredients }) => {
           </tr>
         </thead>
         <tbody>
-          <tr className="yeast__row"><td>{ingredients.yeast}</td></tr>
+          <tr className="yeast__row"><td>{ingredients?.yeast}</td></tr>
         </tbody>
       </table>
     </div>
