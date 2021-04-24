@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getSingleBeer } from '../../apiCalls';
-import { GiWheat } from "react-icons/gi"
+import { GiWheat, GiHops, GiDna2} from "react-icons/gi"
 import './Recipe.css'
 
 export const Recipe = ({ id }) => {
@@ -19,40 +19,23 @@ export const Recipe = ({ id }) => {
     const weight = convertToPounds(ingredient.amount.value)
     return (
       <tr className='malt__row' key={index}>
-        <td>{ingredient.name}</td>
+        <td className='ingredient-name'>{ingredient.name}</td>
         <td>{weight}{weight > 1 ? 'lbs' : 'lb'}</td>
         <td>{ingredient.amount.value}kg</td>
       </tr>
     )
   })
 
-  const hop = recipe.ingredients?.hops.map(ingredient => {
+  const hops = recipe.ingredients?.hops.map((ingredient, index) => {
     return (
-      <>
-       <p>{ingredient.name}</p>
-       <p>{ingredient.amount.value}</p>
-       <p>{ingredient.amount.unit}</p>
-       <p>{ingredient.add}</p>
-       <p>{ingredient.attribute}</p>
-      </>
+      <tr className='malt__row' key={index}>
+        <td className='ingredient-name'>{ingredient.name}</td>
+        <td>{ingredient.amount.value}g</td>
+        <td>{ingredient?.add}</td>
+        <td>{ingredient?.attribute}</td>
+      </tr>
     )
   })
-
-  const setTableData = (data) => {
-    return recipe.ingredients[data].map(ingredient => {
-      return (
-        <tr>
-          <td>{ingredient.name}</td>
-          <td>{ingredient.amount.value}</td>
-          <td>{ingredient.amount.unit}</td>
-          <td>{ingredient?.add}</td>
-          <td>{ingredient?.attribute}</td>
-        </tr>
-      )
-    })
-  }
-  // const hops = recipe.ingredients?.hops && setTableData('hops')
-  // const malts = recipe.ingredients?.malt && setTableData('malt')
 
   return (
     <div className="recipe">
@@ -80,7 +63,33 @@ export const Recipe = ({ id }) => {
             {malts}
           </tbody>
         </table>
-        {/* {hops} */}
+        <table className="hop-table">
+          <thead>
+            <tr>
+              <th className='table-head'>
+              <div className="icon"><GiHops className="icon__hop"/></div>Hops
+              </th>
+              <th> Weight</th>
+              <th> Schedule</th>
+              <th> Attribute</th>
+            </tr>
+          </thead>
+          <tbody>
+            {hops}
+          </tbody>
+        </table>
+        <table className="yeast-table">
+          <thead>
+            <tr>
+              <th className='table-head'>
+              <div className="icon"><GiDna2 className="icon__yeast"/></div>Yeast
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>{recipe.ingredients.yeast}</tr>
+          </tbody>
+        </table>
       </div>
     </div>
   )
