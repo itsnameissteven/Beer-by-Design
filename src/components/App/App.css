@@ -3,25 +3,55 @@
   grid-template-columns: 1fr 1fr 1fr 25%;
 }
 
-.container {
+.nav {
   grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  justify-content: start;
+  align-content: end;
+  /* padding: 0 20px; */
   height: 100px;
   background-color: rgb(65, 65, 65);
 }
 
-.app__header {
-  display: inline;
-  color: transparent;
-  justify-self: center;
-  /* display: flex; */
-  /* justify-content: center; */
-  background-image: url("../../assets/Rail_Header_3-21.jpeg");
-  background-position: top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-clip: text;
-  background-color: white;
-  /* align-items: center; */
+.nav__header {
+  color: white;
   font-size: 50px;
   font-family: "Gravitas One", cursive;
+  padding-left: 10px;
+}
+
+.nav-link {
+  text-decoration: none;
+  align-self: end;
+  color: white;
+  font-size: 22px;
+  padding: 3px 6px;
+  margin: 7px;
+}
+
+.active {
+  color: yellow;
+  border-bottom: 1px solid yellow;
+}
+
+@media screen and (max-width: 1000px) {
+  .nav__header {
+    font-size: 30px;
+  }
+
+  .nav-link {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .nav__header {
+    font-size: 20px;
+    align-self: center;
+  }
+
+  .nav-link {
+    font-size: 16px;
+  }
 }

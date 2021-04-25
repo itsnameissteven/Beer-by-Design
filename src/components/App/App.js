@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { Switch, Route, } from 'react-router-dom';
+import { Switch, Route, NavLink} from 'react-router-dom';
 import  FeaturedBeers from '../FeaturedBeers/FeaturedBeers';
 import SearchBar from '../SearchBar/SearchBar';
 import SearchResults from '../SearchResults/SearchResults';
@@ -17,9 +17,18 @@ function App() {
 
   return (
     <div className="app">
-      <div className='container'>
-        <h1 className="app__header">Brew by Design</h1>
-      </div>
+      <nav className='nav'>
+        <h1 className="nav__header">Brew by Design</h1>
+        <NavLink exact to="/" className="nav-link" activeClassName="active">
+          Home
+        </NavLink>
+        <NavLink to="/how-to" className="nav-link" activeClassName="active">
+          How to brew
+        </NavLink>
+        <NavLink to="/saved-recipes" className="nav-link" activeClassName="active">
+          Saved Recipes
+        </NavLink>
+      </nav>
       <SearchBar />
       <Switch>
         <Route path="/" exact render={() => { 

@@ -7,7 +7,6 @@ import Method from '../Method/Method';
 import FoodPairings from '../FoodPairings/FoodParings';
 import BrewTips from '../BrewTips/BrewTips';
 import './Recipe.css';
-import { findRenderedDOMComponentWithClass } from 'react-dom/test-utils';
 
 const Recipe = ({ id }) => {
   const [recipe, setRecipe] = useState({})
