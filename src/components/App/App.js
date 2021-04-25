@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import { Switch, Route, } from 'react-router-dom';
-import { FeaturedBeers } from '../FeaturedBeers/FeaturedBeers';
-import { SearchBar } from '../SearchBar/SearchBar';
-import { SearchResults } from '../SearchResults/SearchResults';
-import { Recipe } from '../Recipe/Recipe';
+import  FeaturedBeers from '../FeaturedBeers/FeaturedBeers';
+import SearchBar from '../SearchBar/SearchBar';
+import SearchResults from '../SearchResults/SearchResults';
+import Recipe from '../Recipe/Recipe';
 import { getAPIs } from '../../apiCalls.js';
 import './App.css';
 

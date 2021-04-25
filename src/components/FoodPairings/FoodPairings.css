@@ -1,0 +1,10 @@
+.food-pairings {
+  background-color: antiquewhite;
+  padding: 10px;
+}
+
+.food-pairings p {
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}

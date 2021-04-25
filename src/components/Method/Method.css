@@ -1,0 +1,25 @@
+.method {
+  background-color: aqua;
+  padding: 10px;
+}
+
+.method__header {
+  display: inline;
+}
+
+.method__flex {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.method__step {
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.method__step__instruction {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
