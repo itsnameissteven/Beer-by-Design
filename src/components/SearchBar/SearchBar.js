@@ -3,7 +3,7 @@ import { AiOutlineSearch, AiOutlineClose } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import './SearchBar.css';
 
-export const SearchBar = ({updateSearch}) => {
+const SearchBar = () => {
   const [search, setSearch] = useState('')
 
   return (
@@ -24,3 +24,5 @@ export const SearchBar = ({updateSearch}) => {
     </form>
   )
 }
+
+export default SearchBar;

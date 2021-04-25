@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { getSingleBeer } from '../../apiCalls';
 import Ingredients from '../Ingredients/Ingredients';
-import { TargetData } from '../TargetData/TargetData';
-import { Method } from '../Method/Method';
+import TargetData from '../TargetData/TargetData';
+import Method from '../Method/Method';
 import FoodPairings from '../FoodPairings/FoodParings';
-import './Recipe.css'
+import './Recipe.css';
 
-export const Recipe = ({ id }) => {
+const Recipe = ({ id }) => {
   const [recipe, setRecipe] = useState({})
 
   useEffect(() => {
@@ -53,6 +54,15 @@ export const Recipe = ({ id }) => {
       <div className="recipe__food-pairings">
         <FoodPairings pairings={recipe.food_pairing} />
       </div>
+      <div className="recipe__brew-tips">
+        <p></p>
+      </div>
     </div>
   )
 }
+
+Recipe.propTypes = {
+  id: PropTypes.string,
+}
+
+export default Recipe;

@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Method.css';
 import { GiBubbles, GiCampCookingPot } from 'react-icons/gi'
 
-export const Method = ({mash, fermentation}) => {
+const Method = ({mash, fermentation}) => {
   const mashSteps = mash.map((step, index) => {
     return (
       <div className="method__step__instruction" key={index}>
@@ -34,3 +35,9 @@ export const Method = ({mash, fermentation}) => {
     </div>
   )
 }
+
+Method.propTypes = {
+   mash: PropTypes.arrayOf(PropTypes.object),
+   fermentation: PropTypes.object
+}
+export default Method;

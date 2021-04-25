@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './TargetData.css';
 
-export const TargetData = (props) => {
+const TargetData = (props) => {
   const { volume, boilVolume, abv, srm, attenuation, originalGravity, finalGravity} = props;
 
-  
+
   return (
     <div className="target">  
       <div className="target__data">
@@ -38,3 +39,15 @@ export const TargetData = (props) => {
     </div>
   )
 }
+
+TargetData.propTypes = {
+  volume: PropTypes.object,
+  boilVolume: PropTypes.object,
+  abv: PropTypes.number,
+  srm: PropTypes.number,
+  attenuation: PropTypes.number,
+  finalGravity: PropTypes.number,
+  originalGravity: PropTypes.number
+}
+
+export default TargetData;
