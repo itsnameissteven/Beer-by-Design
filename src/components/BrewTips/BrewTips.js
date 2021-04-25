@@ -5,7 +5,7 @@ import './BrewTips.css';
 
 const BrewTips = ({ tips }) => {
   return (
-    <div>
+    <div className="brew-tips">
       <div className="method__flex">
         <div className="icon">
         <GiLightBulb className="icon__img"/>
