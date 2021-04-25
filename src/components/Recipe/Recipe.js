@@ -12,6 +12,10 @@ export const Recipe = ({ id }) => {
     getSingleBeer(id).then(data => setRecipe(...data));
   },[id]);
 
+  if(!recipe.name) {
+    return <h1>Loading ....</h1>
+  }
+
   return (
     <div className="recipe">
       <h1 className="recipe__name">{recipe.name}</h1>
@@ -43,7 +47,7 @@ export const Recipe = ({ id }) => {
         />
       </div>
       <div className="recipe__method">
-        <Method/>
+        <Method mash={recipe.method?.mash_temp} fermentation={recipe.method?.fermentation}/>
       </div>
     </div>
   )
