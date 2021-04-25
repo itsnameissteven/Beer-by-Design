@@ -1,14 +1,15 @@
 import React from 'react';
-import { GiKnifeFork } from 'react-icons/gi'
+import PropTypes from 'prop-types';
+import { GiKnifeFork } from 'react-icons/gi';
 import './FoodPairings.css';
 
-export const FoodPairings = ({pairings}) => {
+const FoodPairings = ({pairings}) => {
   const foodPairings = pairings.map((dish, index) => <p key={index}>{dish}</p>)
 
   if(!pairings) {
     return null
   }
-  
+
   return (
     <div className="food-pairings">
       <div className="method__flex">
@@ -21,3 +22,9 @@ export const FoodPairings = ({pairings}) => {
     </div>
   )
 }
+
+FoodPairings.propTypes = {
+  pairings: PropTypes.arrayOf(PropTypes.string)
+}
+
+export default FoodPairings;

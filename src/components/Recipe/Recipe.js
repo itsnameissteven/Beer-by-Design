@@ -3,7 +3,7 @@ import { getSingleBeer } from '../../apiCalls';
 import { Ingredients } from '../Ingredients/Ingredients';
 import { TargetData } from '../TargetData/TargetData';
 import { Method } from '../Method/Method';
-import { FoodPairings} from '../FoodPairings/FoodParings';
+import FoodPairings from '../FoodPairings/FoodParings';
 import './Recipe.css'
 
 export const Recipe = ({ id }) => {

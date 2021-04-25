@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './FeaturedBeers.css'
 
-export const FeaturedBeers = ({ beerList }) => {
+const FeaturedBeers = ({ beerList }) => {
   const featuredBeers = beerList.map((beer, i) => {
     return (
       <div className="beer-card" key={i}> 
@@ -16,7 +17,13 @@ export const FeaturedBeers = ({ beerList }) => {
     <div className="featured-beers">
       <h2 className="featured-beers__header">Recipes in the Spotlight</h2>
       {featuredBeers}
-    </div>
-  
+    </div> 
   )
 }
+
+FeaturedBeers.propTypes = {
+  beerList: PropTypes.arrayOf(PropTypes.object)
+}
+
+export default FeaturedBeers;
+

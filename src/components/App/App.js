@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { Switch, Route, } from 'react-router-dom';
-import { FeaturedBeers } from '../FeaturedBeers/FeaturedBeers';
+import  FeaturedBeers from '../FeaturedBeers/FeaturedBeers';
 import { SearchBar } from '../SearchBar/SearchBar';
 import { SearchResults } from '../SearchResults/SearchResults';
 import { Recipe } from '../Recipe/Recipe';
