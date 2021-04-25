@@ -39,6 +39,7 @@
 .recipe__about {
   border: 1px solid black;
   background-color: rgb(200, 202, 202);
+  align-self: start;
 }
 
 .recipe__about__header {

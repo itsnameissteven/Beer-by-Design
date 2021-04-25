@@ -2,7 +2,9 @@ import React from 'react';
 import './TargetData.css';
 
 export const TargetData = (props) => {
-  const { volume, boilVolume, abv, srm, attenuation, originalGravity, finalGravity} = props
+  const { volume, boilVolume, abv, srm, attenuation, originalGravity, finalGravity} = props;
+
+  
   return (
     <div className="target">  
       <div className="target__data">

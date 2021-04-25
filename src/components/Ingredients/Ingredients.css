@@ -1,7 +1,6 @@
 .ingredients {
-  padding: 10px 5px;
+  padding: 10px;
   background-color: pink;
-  height: 100%;
 }
 
 .malt__row,
@@ -26,6 +25,10 @@
   margin-bottom: 30px;
 }
 
+.yeast-table {
+  margin-bottom: 10px;
+}
+
 .table-head {
   display: flex;
   align-items: center;
@@ -45,9 +48,7 @@
   margin-right: 10px;
 }
 
-.icon__malt,
-.icon__hop,
-.icon__yeast {
+.icon__img {
   fill: white;
   font-size: 30px;
 }

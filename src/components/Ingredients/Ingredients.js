@@ -37,7 +37,7 @@ export const Ingredients = ({ ingredients }) => {
         <thead>
           <tr>
             <th className='table-head'>
-            <div className="icon"><GiWheat className="icon__malt"/></div>Malt
+            <div className="icon"><GiWheat className="icon__img"/></div>Malt
             </th>
           </tr>
         </thead>
@@ -49,7 +49,8 @@ export const Ingredients = ({ ingredients }) => {
         <thead>
           <tr>
             <th className='table-head'>
-            <div className="icon"><GiHops className="icon__hop"/></div>Hops
+              <div className="icon"><GiHops className="icon__img" /></div>
+              Hops
             </th>
             <th> Weight</th>
             <th> Schedule</th>
@@ -64,7 +65,8 @@ export const Ingredients = ({ ingredients }) => {
         <thead>
           <tr>
             <th className='table-head'>
-            <div className="icon"><GiDna2 className="icon__yeast"/></div>Yeast
+              <div className="icon"><GiDna2 className="icon__img" /></div>
+              Yeast
             </th>
           </tr>
         </thead>

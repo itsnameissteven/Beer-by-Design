@@ -1,0 +1,12 @@
+.method {
+  background-color: aqua;
+  padding: 10px;
+}
+.method__header {
+  display: inline;
+}
+
+.method__flex {
+  display: flex;
+  align-items: center;
+}

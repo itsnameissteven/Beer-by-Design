@@ -8,15 +8,15 @@ export const SearchResults = ({ query }) => {
   const beers = searchResults.map(beer => {
     const {id, name, description, hops, abv, srm, ibu} = beer
     return (
-      <Link to={"/recipe/" + id}>
-      <div className='recipe-card' key={id}>
-        <h3>{name}</h3>
-        <p>{description}</p>
-        <p>{hops.join(' ')}</p>
-        <p>{abv}% ABV</p>
-        <p>{srm}</p>
-        <p>{ibu}</p>
-      </div>
+      <Link to={"/recipe/" + id} key={id}>
+        <div className='recipe-card'>
+          <h3>{name}</h3>
+          <p>{description}</p>
+          <p>{hops.join(' ')}</p>
+          <p>{abv}% ABV</p>
+          <p>{srm}</p>
+          <p>{ibu}</p>
+        </div>
       </Link>
     )
   })

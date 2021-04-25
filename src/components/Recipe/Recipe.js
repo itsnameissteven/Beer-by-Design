@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { getSingleBeer } from '../../apiCalls';
-import { Ingredients } from '../Ingredients/Ingredients'
-import { TargetData } from '../TargetData/TargetData'
+import { Ingredients } from '../Ingredients/Ingredients';
+import { TargetData } from '../TargetData/TargetData';
+import { Method } from '../Method/Method';
 import './Recipe.css'
 
 export const Recipe = ({ id }) => {
@@ -40,6 +41,9 @@ export const Recipe = ({ id }) => {
           originalGravity={recipe.target_og}
           attenuation={recipe.attenuation_level}
         />
+      </div>
+      <div className="recipe__method">
+        <Method/>
       </div>
     </div>
   )
