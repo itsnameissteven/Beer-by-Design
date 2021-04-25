@@ -27,7 +27,11 @@ const SearchResults = ({ query }) => {
     );
   });
 
-  return <div className='search-results'>{beers}</div>
+  return (
+    <div className='search-results'>
+      {!beers.length ? <h1 className="no-results">Sorry no results found please try again</h1> : beers}
+    </div>
+  )
 }
 
 SearchResults.propTypes = {
