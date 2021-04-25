@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { GiWheat, GiHops, GiDna2} from "react-icons/gi";
 import { convertToPounds } from '../../conversions';
 import "./Ingredients.css";
 
-export const Ingredients = ({ ingredients }) => {
+const Ingredients = ({ ingredients }) => {
 
-  const malts = ingredients?.malt.map((ingredient, index) => {
+  const malts = ingredients.malt.map((ingredient, index) => {
     const weight = convertToPounds(ingredient.amount.value)
     return (
       <tr className='malt__row' key={index}>
@@ -16,7 +17,7 @@ export const Ingredients = ({ ingredients }) => {
     )
   })
 
-  const hops = ingredients?.hops.map((ingredient, index) => {
+  const hops = ingredients.hops.map((ingredient, index) => {
     return (
       <tr className='hop__row' key={index}>
         <td className='ingredient-name'>{ingredient.name}</td>
@@ -73,3 +74,10 @@ export const Ingredients = ({ ingredients }) => {
     </div>
   )
 }
+
+Ingredients.propTypes = {
+  hops: PropTypes.arrayOf(PropTypes.object),
+  malts: PropTypes.arrayOf(PropTypes.object)
+}
+
+export default Ingredients;
