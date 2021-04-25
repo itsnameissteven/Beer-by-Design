@@ -9,7 +9,6 @@
   grid-template-columns: 1fr auto auto auto;
   justify-content: start;
   align-content: end;
-  /* padding: 0 20px; */
   height: 100px;
   background-color: rgb(65, 65, 65);
 }

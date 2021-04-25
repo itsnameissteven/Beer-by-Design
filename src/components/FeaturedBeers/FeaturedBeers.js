@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './FeaturedBeers.css'
+import  homebrew from '../../assets/homebrew.jpg'
 
 const FeaturedBeers = ({ beerList }) => {
   const featuredBeers = beerList.map((beer, i) => {
@@ -15,6 +16,10 @@ const FeaturedBeers = ({ beerList }) => {
   })
   return( 
     <div className="featured-beers">
+      <div className="img-container">
+        <img className="hero-img" src={homebrew} alt="homebrew beer on a table"/>
+        <p className="hero-img-mantra">"Relax. Don't worry. And <br />have a homebrew" - Charlie Papazian</p>
+      </div>
       <h2 className="featured-beers__header">Recipes in the Spotlight</h2>
       {featuredBeers}
     </div> 
