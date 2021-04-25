@@ -1,8 +1,9 @@
 .recipe {
   grid-column: 1/-1;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 25%;
-  grid-auto-rows: min-content;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 .recipe__name {
@@ -19,6 +20,7 @@
   align-items: center;
   border-top: 8px solid black;
   border-bottom: 8px solid black;
+  margin-bottom: 20px;
 }
 
 .recipe__tagline {
@@ -53,6 +55,7 @@
 
 .recipe__ingredients {
   grid-row: span 2;
+  margin: 0 auto;
 }
 
 .recipe__target-data {

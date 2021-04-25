@@ -5,4 +5,6 @@
 
 .food-pairings p {
   border-bottom: 1px solid black;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
 }
