@@ -7,7 +7,6 @@ import Method from '../Method/Method';
 import FoodPairings from '../FoodPairings/FoodParings';
 import BrewTips from '../BrewTips/BrewTips';
 import './Recipe.css';
-import { findRenderedDOMComponentWithClass } from 'react-dom/test-utils';
 
 const Recipe = ({ id }) => {
   const [recipe, setRecipe] = useState({})
@@ -32,6 +31,7 @@ const Recipe = ({ id }) => {
       <div className="recipe__about">
         <h3 className="recipe__about__header">ABOUT THIS BEER</h3>
         <p className="recipe__about__description">{recipe.description}</p>
+         <BrewTips tips={recipe.brewers_tips} />
       </div>
       <div className="recipe__ingredients">
         <h2>Ingredients</h2>
@@ -55,9 +55,6 @@ const Recipe = ({ id }) => {
       </div>
       <div className="recipe__food-pairings">
         <FoodPairings pairings={recipe.food_pairing} />
-      </div>
-      <div className="recipe__brew-tips">
-        <BrewTips tips={recipe.brewers_tips} />
       </div>
     </div>
   )

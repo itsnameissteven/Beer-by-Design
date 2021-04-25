@@ -1,7 +1,6 @@
 .search {
   grid-column: 1/-1;
-  background-color: aqua;
-  height: 70px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,6 +9,7 @@
 .search__container {
   display: flex;
   align-items: center;
+  border: 1px solid rgb(179, 179, 179);
   background-color: #fff;
   border-radius: 50px;
   width: 80%;

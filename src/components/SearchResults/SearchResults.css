@@ -1,7 +1,56 @@
 .search-results {
   grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 20px;
+  padding: 30px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.no-results {
+  text-align: center;
+}
+
+.recipe-link {
+  text-decoration: none;
+  color: black;
 }
 
 .recipe-card {
-  border: 2px solid whitesmoke;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 10px;
+  border: 2px solid rgb(180, 180, 180);
+  border-radius: 6px;
+}
+
+.recipe-card:hover {
+  cursor: pointer;
+  box-shadow: -2px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-card__name,
+.recipe-card__description,
+.recipe-card__hops {
+  margin-bottom: 10px;
+}
+
+.hops {
+  font-weight: bold;
+}
+
+.hop-icon {
+  fill: rgb(29, 124, 29);
+}
+
+.beer-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: auto;
+}
+
+.beer-stats__number {
+  font-weight: bold;
 }
