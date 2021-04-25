@@ -58,3 +58,8 @@
 .recipe__target-data {
   grid-column: 1;
 }
+
+.recipe__method {
+  grid-row: 3;
+  grid-column: 3;
+}

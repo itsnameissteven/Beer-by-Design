@@ -1,13 +1,9 @@
 import React from 'react';
-import { GiWheat, GiHops, GiDna2} from "react-icons/gi"
-import "./Ingredients.css"
+import { GiWheat, GiHops, GiDna2} from "react-icons/gi";
+import { convertToPounds } from '../../conversions';
+import "./Ingredients.css";
 
 export const Ingredients = ({ ingredients }) => {
-
-  const convertToPounds = (value) => {
-    const num = value * 2.2046226218;
-    return num.toFixed(1);
-  }
 
   const malts = ingredients?.malt.map((ingredient, index) => {
     const weight = convertToPounds(ingredient.amount.value)

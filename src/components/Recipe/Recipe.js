@@ -3,6 +3,7 @@ import { getSingleBeer } from '../../apiCalls';
 import { Ingredients } from '../Ingredients/Ingredients';
 import { TargetData } from '../TargetData/TargetData';
 import { Method } from '../Method/Method';
+import { FoodPairings} from '../FoodPairings/FoodParings';
 import './Recipe.css'
 
 export const Recipe = ({ id }) => {
@@ -47,7 +48,10 @@ export const Recipe = ({ id }) => {
         />
       </div>
       <div className="recipe__method">
-        <Method mash={recipe.method?.mash_temp} fermentation={recipe.method?.fermentation}/>
+        <Method mash={recipe.method.mash_temp} fermentation={recipe.method.fermentation}/>
+      </div>
+      <div className="recipe__food-pairings">
+        <FoodPairings pairings={recipe.food_pairing} />
       </div>
     </div>
   )

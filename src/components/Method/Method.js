@@ -11,7 +11,7 @@ export const Method = ({mash, fermentation}) => {
       </div>
     )
   })
-  
+
   return (
     <div className='method'>
       <div className="method__flex">
