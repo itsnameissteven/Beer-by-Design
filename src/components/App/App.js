@@ -4,22 +4,29 @@ import  FeaturedBeers from '../FeaturedBeers/FeaturedBeers';
 import SearchBar from '../SearchBar/SearchBar';
 import SearchResults from '../SearchResults/SearchResults';
 import Recipe from '../Recipe/Recipe';
+import SavedRecipes from '../SavedRecipes/SavedRecipes';
 import { getAPIs } from '../../apiCalls.js';
 import './App.css';
 
 
 function App() {
   const [beerList, setBeerList] = useState([]);
-  const [savedRecipe, setSavedRecipe] = useState([])
+  const [savedRecipes, setSavedRecipe] = useState([])
 
   useEffect(() => {
     getAPIs().then(data => setBeerList(data))
   }, [])
 
   const saveRecipe = (newRecipe) => {
-    const isSaved = savedRecipe.some( recipe => recipe.id === newRecipe.id)
+    const isSaved = savedRecipes.some( recipe => recipe.id === newRecipe.id)
     if(!isSaved) {
-      setSavedRecipe([...savedRecipe, newRecipe])
+      setSavedRecipe([...savedRecipes, {
+        id: newRecipe.id,
+        name: newRecipe.name,
+        abv: newRecipe.abv,
+        srm: newRecipe.srm,
+        ibu: newRecipe.ibu
+      }])
     }
   }
 
@@ -50,6 +57,9 @@ function App() {
         <Route path="/recipe/:id" render={({ match }) => {
           const { id } = match.params
           return <Recipe id={id} saveRecipe={saveRecipe}/>
+        }} />
+        <Route path="/saved-recipes" render={() => {
+          return <SavedRecipes recipes={savedRecipes}/>
         }} />
       </Switch> 
     </div>
