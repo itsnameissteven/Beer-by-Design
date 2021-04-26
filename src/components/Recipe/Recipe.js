@@ -8,12 +8,13 @@ import FoodPairings from '../FoodPairings/FoodParings';
 import BrewTips from '../BrewTips/BrewTips';
 import './Recipe.css';
 
-const Recipe = ({ id, saveRecipe }) => {
+const Recipe = ({ id, saveRecipe, setError }) => {
   const [recipe, setRecipe] = useState({})
 
   useEffect(() => {
-    getSingleBeer(id).then(data => setRecipe(...data));
-  },[id]);
+    getSingleBeer(id).then(data => setRecipe(...data))
+      .catch(err => setError(err.message))
+  },[id, setError]);
 
   if(!recipe.name) {
     return <h1>Loading ....</h1>
@@ -67,7 +68,8 @@ const Recipe = ({ id, saveRecipe }) => {
 
 Recipe.propTypes = {
   id: PropTypes.string,
-  saveRecipe: PropTypes.func 
+  saveRecipe: PropTypes.func ,
+  setError: PropTypes.func
 }
 
 export default Recipe;

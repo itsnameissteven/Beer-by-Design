@@ -1,16 +1,16 @@
 const baseURL = 'https://api.punkapi.com/v2/beers'
 
 export const getAPIs = () => {
-  return fetch(baseURL).then(response => response.json());
+  return fetch(baseURL).then(handleErrors).then(data => data.slice(19));
 }
 
 export const searchAPI = (query) => {
   return fetch(`${baseURL}?beer_name=${query}`)
-    .then(response => response.json()).then(data => cleanData(data))
+    .then(handleErrors).then(data => cleanData(data))
 }
 
 export const getSingleBeer = (id) => {
-  return fetch(`${baseURL}/${id}`).then(response => response.json())
+  return fetch(`${baseURL}/${id}`).then(handleErrors)
 }
 
 const cleanData = (apiData) => {
@@ -26,4 +26,11 @@ const cleanData = (apiData) => {
       hops: [...new Set(hops)]
     }
   })
+}
+
+const handleErrors = (response) => {
+  if(!response.ok) {
+    throw new Error(`${response.status}`)
+  }
+  return response.json()
 }

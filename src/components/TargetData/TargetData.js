@@ -1,20 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { literToGallon } from '../../conversions';
 import './TargetData.css';
 
 const TargetData = (props) => {
   const { volume, boilVolume, abv, srm, attenuation, originalGravity, finalGravity} = props;
-
-
+  const volumeGal = literToGallon(volume.value);
+  const boilVolumeGal = literToGallon(boilVolume.value);
   return (
     <div className="target">  
       <div className="target__data">
         <p className='target__data__name'>volume</p>
-        <p>{volume?.value}</p>
+        <p>{volumeGal} gal</p>
       </div>
       <div className="target__data">
         <p className='target__data__name'>boil volume</p>
-        <p>{boilVolume?.value}</p>
+        <p>{boilVolumeGal} gal</p>
       </div>
       <div className="target__data">
         <p className='target__data__name'>abv</p>
@@ -34,7 +35,7 @@ const TargetData = (props) => {
       </div>
       <div className="target__data">
         <p className='target__data__name'>attenuation level</p>
-        <p>{attenuation}</p>
+        <p>{attenuation}%</p>
       </div>
     </div>
   )

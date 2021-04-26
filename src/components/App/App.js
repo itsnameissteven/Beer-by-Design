@@ -1,24 +1,27 @@
 import React, {useState, useEffect} from 'react';
-import { Switch, Route, NavLink} from 'react-router-dom';
+import { Switch, Route, NavLink, Redirect} from 'react-router-dom';
 import  FeaturedBeers from '../FeaturedBeers/FeaturedBeers';
 import SearchBar from '../SearchBar/SearchBar';
 import SearchResults from '../SearchResults/SearchResults';
 import Recipe from '../Recipe/Recipe';
 import SavedRecipes from '../SavedRecipes/SavedRecipes';
+import Error from '../Error/Error';
 import { getAPIs } from '../../apiCalls.js';
 import './App.css';
 
 
 function App() {
   const [beerList, setBeerList] = useState([]);
-  const [savedRecipes, setSavedRecipes] = useState([])
+  const [error, setError] = useState('');
+  const [savedRecipes, setSavedRecipes] = useState([]);
 
   useEffect(() => {
     getAPIs().then(data => setBeerList(data))
+      .catch(err => setError(err.message));
   }, [])
 
   const saveRecipe = (newRecipe) => {
-    const isSaved = savedRecipes.some( recipe => recipe.id === newRecipe.id)
+    const isSaved = savedRecipes.some( recipe => recipe.id === newRecipe.id);
     if(!isSaved) {
       setSavedRecipes([...savedRecipes, {
         id: newRecipe.id,
@@ -26,7 +29,7 @@ function App() {
         abv: newRecipe.abv,
         srm: newRecipe.srm,
         ibu: newRecipe.ibu
-      }])
+      }]);
     }
   }
 
@@ -39,20 +42,18 @@ function App() {
     <div className="app">
       <nav className='nav'>
         <h1 className="nav__header">Brew by Design</h1>
-        <NavLink exact to="/" className="nav-link" activeClassName="active">
+        <NavLink exact to="/" className="nav-link" activeClassName="active" onClick={() => setError('')}>
           Home
         </NavLink>
-        <NavLink to="/how-to" className="nav-link" activeClassName="active">
-          How to brew
-        </NavLink>
-        <NavLink to="/saved-recipes" className="nav-link" activeClassName="active">
+        <NavLink to="/saved-recipes" className="nav-link" activeClassName="active" onClick={() => setError('')}>
           Saved Recipes
         </NavLink>
       </nav>
       <SearchBar />
+      {error && <Redirect to="/error" />}
       <Switch>
         <Route path="/" exact render={() => { 
-            return <FeaturedBeers beerList={beerList.slice(19)} />
+            return <FeaturedBeers beerList={beerList} />
         }}  
         />
         <Route path="/search/:search" render={({ match }) => {
@@ -61,11 +62,12 @@ function App() {
         }} />
         <Route path="/recipe/:id" render={({ match }) => {
           const { id } = match.params
-          return <Recipe id={id} saveRecipe={saveRecipe}/>
+          return <Recipe id={id} saveRecipe={saveRecipe} setError={setError}/>
         }} />
         <Route path="/saved-recipes" render={() => {
           return <SavedRecipes recipes={savedRecipes} deleteRecipe={deleteSavedRecipe}/>
         }} />
+        <Route render={() =>  <Error setError={setError}/>} />
       </Switch> 
     </div>
   );
