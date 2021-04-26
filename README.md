@@ -21,7 +21,7 @@
   - [Responsive Design](#responsive-design)
   - [Responsive Design](#responsive-design)
   - [Error Handling](#error-handling)
-  - [Future Considerations](#future-considerations)
+- [Future Considerations](#future-considerations)
 - [Technologies Used](#technologies-used)
 
 ## About The Project
@@ -42,21 +42,37 @@ Home brewing is a passion of mine, over the years, I have struggled to find cons
 
 On the landing page the user has access to a search bar, and handpicked 'featured' recipes. The user can run a search from here or select one of the featured recipes to view more information.
 
+![home page](https://user-images.githubusercontent.com/72312636/116162356-d56cd100-a6b2-11eb-8c62-59e5e5d7e86b.gif)
+
 ### Recipe Details
 
 This page features a detailed recipe, with access to an overview, ingredients, food pairings, and method for brewing.
+
+![Screen Shot 2021-04-26 at 5 11 08 PM](https://user-images.githubusercontent.com/72312636/116162368-dbfb4880-a6b2-11eb-9571-59aea0b74c3b.png)
 
 ### Search
 
 Users can search for a recipe using the search bar. After completing a search an overview of each recipe is displayed. Click on the recipe for to see the complete recipe.
 
+<img width="1234" alt="Screen Shot 2021-04-26 at 5 02 26 PM" src="https://user-images.githubusercontent.com/72312636/116162357-d7369480-a6b2-11eb-88a0-9c9966f04354.png">
+
+## Save Recipes
+On the recipe page, users can save a recipe. Once saved a list is accessible from the 'saved recipe' page.
+
+<img width="1437" alt="Screen Shot 2021-04-26 at 5 09 46 PM" src="https://user-images.githubusercontent.com/72312636/116162363-d998ee80-a6b2-11eb-867e-b4cada6b0564.png">
+
 ## Responsive Design
 
 Responsive design was considered for desktop, tablet and mobile view.
 
+![Apr-26-2021 17-14-45](https://user-images.githubusercontent.com/72312636/116162635-722f6e80-a6b3-11eb-832b-579e502d9a50.gif)
+
+![Screen Shot 2021-04-26 at 5 12 29 PM](https://user-images.githubusercontent.com/72312636/116162819-c9354380-a6b3-11eb-9055-9ac69d357cb5.png)
+
 ## Error Handling
 
 Error handling was built to give the user feedback if a bad response is returned from api calls or if a bad url path was accessed.
+![Screen Shot 2021-04-26 at 5 21 56 PM](https://user-images.githubusercontent.com/72312636/116162904-ed912000-a6b3-11eb-95da-a593ce74214c.png)
 
 ## Future Considerations
 
