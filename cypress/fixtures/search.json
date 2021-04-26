@@ -1,0 +1,652 @@
+[
+  {
+    "id": 106,
+    "name": "Punk IPA 2010 it me",
+    "tagline": "Post Modern Classic. Spiky. Tropical. Hoppy.",
+    "first_brewed": "10/2010",
+    "description": "Punk IPA. Amplified. In 2010 we finally got our paws on the equipment we needed to dry hop our beers. We focused all our energy on dry hopping, amping up the aroma and flavour of our flagship beer to create a relentless explosion of tropical fruits, and adding a hint of Caramalt to balance out the insane amount of hops.",
+    "image_url": "https://images.punkapi.com/v2/106.png",
+    "abv": 5.6,
+    "ibu": 40,
+    "target_fg": 1011,
+    "target_og": 1055,
+    "ebc": 15,
+    "srm": 7.6,
+    "ph": 4.4,
+    "attenuation_level": 78,
+    "volume": {
+      "value": 20,
+      "unit": "litres"
+    },
+    "boil_volume": {
+      "value": 25,
+      "unit": "litres"
+    },
+    "method": {
+      "mash_temp": [
+        {
+          "temp": {
+            "value": 66,
+            "unit": "celsius"
+          },
+          "duration": 75
+        }
+      ],
+      "fermentation": {
+        "temp": {
+          "value": 19,
+          "unit": "celsius"
+        }
+      },
+      "twist": null
+    },
+    "ingredients": {
+      "malt": [
+        {
+          "name": "Extra Pale",
+          "amount": {
+            "value": 4.38,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Caramalt",
+          "amount": {
+            "value": 0.25,
+            "unit": "kilograms"
+          }
+        }
+      ],
+      "hops": [
+        {
+          "name": "Chinook",
+          "amount": {
+            "value": 20,
+            "unit": "grams"
+          },
+          "add": "start",
+          "attribute": "bitter"
+        },
+        {
+          "name": "Ahtanum",
+          "amount": {
+            "value": 12.5,
+            "unit": "grams"
+          },
+          "add": "start",
+          "attribute": "bitter"
+        },
+        {
+          "name": "Chinook",
+          "amount": {
+            "value": 20,
+            "unit": "grams"
+          },
+          "add": "middle",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Ahtanum",
+          "amount": {
+            "value": 12.5,
+            "unit": "grams"
+          },
+          "add": "middle",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Chinook",
+          "amount": {
+            "value": 27.5,
+            "unit": "grams"
+          },
+          "add": "end",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Ahtanum",
+          "amount": {
+            "value": 12.5,
+            "unit": "grams"
+          },
+          "add": "end",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Simcoe",
+          "amount": {
+            "value": 12.5,
+            "unit": "grams"
+          },
+          "add": "end",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Nelson Sauvin",
+          "amount": {
+            "value": 12.5,
+            "unit": "grams"
+          },
+          "add": "end",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Chinook",
+          "amount": {
+            "value": 47.5,
+            "unit": "grams"
+          },
+          "add": "dry hop",
+          "attribute": "aroma"
+        },
+        {
+          "name": "Ahtanum",
+          "amount": {
+            "value": 37.5,
+            "unit": "grams"
+          },
+          "add": "dry hop",
+          "attribute": "aroma"
+        },
+        {
+          "name": "Simcoe",
+          "amount": {
+            "value": 37.5,
+            "unit": "grams"
+          },
+          "add": "dry hop",
+          "attribute": "aroma"
+        },
+        {
+          "name": "Nelson Sauvin",
+          "amount": {
+            "value": 20,
+            "unit": "grams"
+          },
+          "add": "dry hop",
+          "attribute": "aroma"
+        },
+        {
+          "name": "Cascade",
+          "amount": {
+            "value": 37.5,
+            "unit": "grams"
+          },
+          "add": "dry hop",
+          "attribute": "aroma"
+        },
+        {
+          "name": "Amarillo",
+          "amount": {
+            "value": 10,
+            "unit": "grams"
+          },
+          "add": "dry hop",
+          "attribute": "aroma"
+        }
+      ],
+      "yeast": "Wyeast 1056 - American Ale™"
+    },
+    "food_pairing": [
+      "Spicy carne asada with a pico de gallo sauce",
+      "Shredded chicken tacos with a mango chilli lime salsa",
+      "Cheesecake with a passion fruit swirl sauce"
+    ],
+    "brewers_tips": "To get the best possible profile from the dry hops we recommend dry hopping post fermentation for 5 days. Dry hops should be added at cellar temperature. We find 14°C results in the most aromatic dry hop profile.",
+    "contributed_by": "Sam Mason <samjbmason>"
+  },
+  {
+    "id": 107,
+    "name": "HBC 366 - IPA Is Dead",
+    "tagline": "Single Hop India Pale Ale.",
+    "first_brewed": "02/2014",
+    "description": "A new, at-the-time un-named American hop now known as Equinox. Piney, resinous with spicy fruit notes and biting grapefruit. Stewed orange and pineapple with a resinous edge.",
+    "image_url": "https://images.punkapi.com/v2/107.png",
+    "abv": 7.2,
+    "ibu": 70,
+    "target_fg": 1012,
+    "target_og": 1067,
+    "ebc": 30,
+    "srm": 15,
+    "ph": 4.4,
+    "attenuation_level": 82.1,
+    "volume": {
+      "value": 20,
+      "unit": "litres"
+    },
+    "boil_volume": {
+      "value": 25,
+      "unit": "litres"
+    },
+    "method": {
+      "mash_temp": [
+        {
+          "temp": {
+            "value": 65,
+            "unit": "celsius"
+          },
+          "duration": null
+        }
+      ],
+      "fermentation": {
+        "temp": {
+          "value": 19,
+          "unit": "celsius"
+        }
+      },
+      "twist": null
+    },
+    "ingredients": {
+      "malt": [
+        {
+          "name": "Extra Pale",
+          "amount": {
+            "value": 5.65,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Caramalt",
+          "amount": {
+            "value": 0.31,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Dark Crystal",
+          "amount": {
+            "value": 0.06,
+            "unit": "kilograms"
+          }
+        }
+      ],
+      "hops": [
+        {
+          "name": "HBC 366",
+          "amount": {
+            "value": 2.5,
+            "unit": "grams"
+          },
+          "add": "start",
+          "attribute": "bitter"
+        },
+        {
+          "name": "HBC 366",
+          "amount": {
+            "value": 25,
+            "unit": "grams"
+          },
+          "add": "middle",
+          "attribute": "flavour"
+        },
+        {
+          "name": "HBC 366",
+          "amount": {
+            "value": 37.5,
+            "unit": "grams"
+          },
+          "add": "end",
+          "attribute": "flavour"
+        },
+        {
+          "name": "HBC 366",
+          "amount": {
+            "value": 250,
+            "unit": "grams"
+          },
+          "add": "dry hop",
+          "attribute": "aroma"
+        }
+      ],
+      "yeast": "Wyeast 1056 - American Ale™"
+    },
+    "food_pairing": [
+      "Spicy black bean and chicken tortilla soup",
+      "Spicy lamb tikka masala",
+      "Fruity bread pudding"
+    ],
+    "brewers_tips": "With new hop varieties, growers are discovering flavour attributes completely unexpected from hops, which can add unique character to your brews.",
+    "contributed_by": "Sam Mason <samjbmason>"
+  },
+  {
+    "id": 115,
+    "name": "Melon And Cucumber IPA - B-Sides",
+    "tagline": "Fresh Melon IPA.",
+    "first_brewed": "03/2015",
+    "description": "A Pilot Brew with 200Kg of fresh melon and 5Kg fresh cucumber added after fermentation to produce the perfect summer refreshment.",
+    "image_url": "https://images.punkapi.com/v2/keg.png",
+    "abv": 6,
+    "ibu": 50,
+    "target_fg": 1010,
+    "target_og": 1050,
+    "ebc": 8,
+    "srm": 4,
+    "ph": 5.2,
+    "attenuation_level": 87,
+    "volume": {
+      "value": 20,
+      "unit": "litres"
+    },
+    "boil_volume": {
+      "value": 25,
+      "unit": "litres"
+    },
+    "method": {
+      "mash_temp": [
+        {
+          "temp": {
+            "value": 60,
+            "unit": "celsius"
+          },
+          "duration": 10
+        },
+        {
+          "temp": {
+            "value": 65,
+            "unit": "celsius"
+          },
+          "duration": 30
+        },
+        {
+          "temp": {
+            "value": 72,
+            "unit": "celsius"
+          },
+          "duration": 10
+        },
+        {
+          "temp": {
+            "value": 78,
+            "unit": "celsius"
+          },
+          "duration": 5
+        }
+      ],
+      "fermentation": {
+        "temp": {
+          "value": 20,
+          "unit": "celsius"
+        }
+      },
+      "twist": "Melon: 500g, Cucumber: 20g"
+    },
+    "ingredients": {
+      "malt": [
+        {
+          "name": "Extra Pale",
+          "amount": {
+            "value": 4.38,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Caramalt",
+          "amount": {
+            "value": 0.63,
+            "unit": "kilograms"
+          }
+        }
+      ],
+      "hops": [
+        {
+          "name": "Ahtanum",
+          "amount": {
+            "value": 7.5,
+            "unit": "grams"
+          },
+          "add": "start",
+          "attribute": "bitter"
+        },
+        {
+          "name": "Chinook",
+          "amount": {
+            "value": 5,
+            "unit": "grams"
+          },
+          "add": "middle",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Ahtanum",
+          "amount": {
+            "value": 7.5,
+            "unit": "grams"
+          },
+          "add": "middle",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Chinook",
+          "amount": {
+            "value": 5,
+            "unit": "grams"
+          },
+          "add": "end",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Ahtanum",
+          "amount": {
+            "value": 7.5,
+            "unit": "grams"
+          },
+          "add": "end",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Simcoe",
+          "amount": {
+            "value": 12.5,
+            "unit": "grams"
+          },
+          "add": "end",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Nelson Sauvin",
+          "amount": {
+            "value": 6,
+            "unit": "grams"
+          },
+          "add": "end",
+          "attribute": "flavour"
+        }
+      ],
+      "yeast": "Wyeast 1056 - American Ale™"
+    },
+    "food_pairing": [
+      "Beef carpaccio",
+      "Chilled beetroot soup",
+      "Korean watermelon salad"
+    ],
+    "brewers_tips": "Have a good food proccesser to blend up all the melon and cucumber, also sieve out the seeds from the melon.",
+    "contributed_by": "Sam Mason <samjbmason>"
+  },
+  {
+    "id": 125,
+    "name": "Juniper Wheat Beer",
+    "tagline": "American Style Wheat Ale With Juniper Berries.",
+    "first_brewed": "06/2011",
+    "description": "A variant on the 2008 release of Bad Pixie, but hoppier. Substituting the lemon peel for Ahtanum provided a vibrant floral and lemon citrus hit, balancing the slight tartness from the wheat. This dry, effervescent brew is perfect on Scotland's one day of summer.",
+    "image_url": "https://images.punkapi.com/v2/keg.png",
+    "abv": 5,
+    "ibu": 40,
+    "target_fg": 1008,
+    "target_og": 1047,
+    "ebc": 15,
+    "srm": 7.5,
+    "ph": 4.1,
+    "attenuation_level": 83,
+    "volume": {
+      "value": 20,
+      "unit": "litres"
+    },
+    "boil_volume": {
+      "value": 25,
+      "unit": "litres"
+    },
+    "method": {
+      "mash_temp": [
+        {
+          "temp": {
+            "value": 64,
+            "unit": "celsius"
+          },
+          "duration": 75
+        }
+      ],
+      "fermentation": {
+        "temp": {
+          "value": 17,
+          "unit": "celsius"
+        }
+      },
+      "twist": null
+    },
+    "ingredients": {
+      "malt": [
+        {
+          "name": "Pale Ale",
+          "amount": {
+            "value": 2.75,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Wheat",
+          "amount": {
+            "value": 2.13,
+            "unit": "kilograms"
+          }
+        }
+      ],
+      "hops": [
+        {
+          "name": "Ahtanum",
+          "amount": {
+            "value": 31.25,
+            "unit": "grams"
+          },
+          "add": "start",
+          "attribute": "bitter"
+        },
+        {
+          "name": "Ahtanum",
+          "amount": {
+            "value": 31.25,
+            "unit": "grams"
+          },
+          "add": "end",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Juniper Berries",
+          "amount": {
+            "value": 25,
+            "unit": "grams"
+          },
+          "add": "dry hop",
+          "attribute": "aroma"
+        }
+      ],
+      "yeast": "Wyeast 1010 - American Wheat™"
+    },
+    "food_pairing": [
+      "Herring rollmops",
+      "Chicken schnitzel",
+      "Gin & elderflower jelly"
+    ],
+    "brewers_tips": "Give the juniper berries a quick blast in a food processor to break them up - otherwise they can jam up your fermenter.",
+    "contributed_by": "Sam Mason <samjbmason>"
+  },
+  {
+    "id": 140,
+    "name": "Pioneer - IPA Is Dead test",
+    "tagline": "Single Hop India Pale Ale.",
+    "first_brewed": "03/2015",
+    "description": "2015 IPA is Dead Series. Pioneer hails from the hop gardens of Kent, and for those expecting something classically English, they surprise with an unforeseen blast of lemony citrus. Bookended with a herbal, cedar quality, these high alpha UK hops pack a pithy zing not often seen from these hop-growing isles.",
+    "image_url": "https://images.punkapi.com/v2/140.png",
+    "abv": 7.2,
+    "ibu": 100,
+    "target_fg": 1010,
+    "target_og": 1064,
+    "ebc": 12,
+    "srm": 6,
+    "ph": 4.4,
+    "attenuation_level": 84,
+    "volume": {
+      "value": 20,
+      "unit": "litres"
+    },
+    "boil_volume": {
+      "value": 25,
+      "unit": "litres"
+    },
+    "method": {
+      "mash_temp": [
+        {
+          "temp": {
+            "value": 65,
+            "unit": "celsius"
+          },
+          "duration": 75
+        }
+      ],
+      "fermentation": {
+        "temp": {
+          "value": 19,
+          "unit": "celsius"
+        }
+      },
+      "twist": null
+    },
+    "ingredients": {
+      "malt": [
+        {
+          "name": "Extra Pale",
+          "amount": {
+            "value": 5.88,
+            "unit": "kilograms"
+          }
+        }
+      ],
+      "hops": [
+        {
+          "name": "Pioneer",
+          "amount": {
+            "value": 41.5,
+            "unit": "grams"
+          },
+          "add": "start",
+          "attribute": "bitter"
+        },
+        {
+          "name": "Pioneer",
+          "amount": {
+            "value": 41.5,
+            "unit": "grams"
+          },
+          "add": "middle",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Pioneer",
+          "amount": {
+            "value": 41.5,
+            "unit": "grams"
+          },
+          "add": "end",
+          "attribute": "flavour"
+        }
+      ],
+      "yeast": "Wyeast 1056 - American Ale™"
+    },
+    "food_pairing": [
+      "Fried teriyaki chicken",
+      "Chicken jalfrezi",
+      "Chocolate and toffee fondant"
+    ],
+    "brewers_tips": "Ensure to get the dry hops in and out within 3 days to ensure you capture the best of the hop.",
+    "contributed_by": "Sam Mason <samjbmason>"
+  }
+]

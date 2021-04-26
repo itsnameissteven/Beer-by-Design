@@ -19,12 +19,12 @@ const Method = ({mash, fermentation}) => {
         <div className="icon">
         <GiCampCookingPot className="icon__img"/>
         </div>
-        <h3 className="method__header">MASH</h3>
+        <h3 className="method__header">Mash</h3>
       </div>
       <div className="method__step">{mashSteps}</div>
       <div className="method__flex">
         <div className="icon"><GiBubbles className="icon__img"/></div>
-        <h3 className="method__header">FERMENTATION</h3>
+        <h3 className="method__header">Fermentation</h3>
       </div>
       <div className="method__step">
         <div className="method__step__instruction">
