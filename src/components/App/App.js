@@ -10,10 +10,18 @@ import './App.css';
 
 function App() {
   const [beerList, setBeerList] = useState([]);
+  const [savedRecipe, setSavedRecipe] = useState([])
 
   useEffect(() => {
     getAPIs().then(data => setBeerList(data))
   }, [])
+
+  const saveRecipe = (newRecipe) => {
+    const isSaved = savedRecipe.some( recipe => recipe.id === newRecipe.id)
+    if(!isSaved) {
+      setSavedRecipe([...savedRecipe, newRecipe])
+    }
+  }
 
   return (
     <div className="app">
@@ -41,7 +49,7 @@ function App() {
         }} />
         <Route path="/recipe/:id" render={({ match }) => {
           const { id } = match.params
-          return <Recipe id={id}/>
+          return <Recipe id={id} saveRecipe={saveRecipe}/>
         }} />
       </Switch> 
     </div>
