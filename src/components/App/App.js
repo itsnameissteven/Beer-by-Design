@@ -5,6 +5,7 @@ import SearchBar from '../SearchBar/SearchBar';
 import SearchResults from '../SearchResults/SearchResults';
 import Recipe from '../Recipe/Recipe';
 import SavedRecipes from '../SavedRecipes/SavedRecipes';
+import Error from '../Error/Error';
 import { getAPIs } from '../../apiCalls.js';
 import './App.css';
 
@@ -16,7 +17,7 @@ function App() {
 
   useEffect(() => {
     getAPIs().then(data => setBeerList(data))
-      .catch(err => setError(err.message))
+      .catch(err => setError(err.message));
   }, [])
 
   const saveRecipe = (newRecipe) => {
@@ -28,7 +29,7 @@ function App() {
         abv: newRecipe.abv,
         srm: newRecipe.srm,
         ibu: newRecipe.ibu
-      }])
+      }]);
     }
   }
 
@@ -52,7 +53,7 @@ function App() {
       {error && <Redirect to="/error" />}
       <Switch>
         <Route path="/" exact render={() => { 
-            return <FeaturedBeers beerList={beerList.slice(19)} />
+            return <FeaturedBeers beerList={beerList} />
         }}  
         />
         <Route path="/search/:search" render={({ match }) => {
@@ -66,9 +67,7 @@ function App() {
         <Route path="/saved-recipes" render={() => {
           return <SavedRecipes recipes={savedRecipes} deleteRecipe={deleteSavedRecipe}/>
         }} />
-        <Route render={() => {
-          return <h1>Oops something went wrong</h1>
-        }}  />
+        <Route render={() =>  <Error setError={setError}/>} />
       </Switch> 
     </div>
   );
