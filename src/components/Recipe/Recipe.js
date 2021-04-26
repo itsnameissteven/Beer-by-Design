@@ -23,7 +23,7 @@ const Recipe = ({ id }) => {
     <div className="recipe">
       <div className="recipe__header-container">
         <h1 className="recipe__name">{recipe.name}</h1>
-        <button className="btn">Save Recipe</button>
+        <button className="btn recipe-btn">Save Recipe</button>
       </div>
       <div className="recipe__stats">
         <p className="recipe__tagline">{recipe.tagline}</p>
