@@ -21,7 +21,10 @@ const Recipe = ({ id }) => {
 
   return (
     <div className="recipe">
-      <h1 className="recipe__name">{recipe.name}</h1>
+      <div className="recipe__header-container">
+        <h1 className="recipe__name">{recipe.name}</h1>
+        <button className="btn">Save Recipe</button>
+      </div>
       <div className="recipe__stats">
         <p className="recipe__tagline">{recipe.tagline}</p>
         <p className="recipe__abv">ABV<br />{recipe.abv}%</p>

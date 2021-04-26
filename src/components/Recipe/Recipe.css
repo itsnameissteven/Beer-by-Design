@@ -7,8 +7,14 @@
   margin-bottom: 20px;
 }
 
-.recipe__name {
+.recipe__header-container {
   grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.recipe__name {
   font-size: 60px;
   padding-left: 30px;
 }
