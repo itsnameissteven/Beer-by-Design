@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import './SavedRecipes.css';
 
-const SavedRecipes = ({ recipes }) => {
-  console.log(recipes)
+const SavedRecipes = ({ recipes, deleteRecipe }) => {
   const recipeList = recipes.map(recipe => {
     return (
       <div className="saved-recipes__card" key={recipe.id}>
@@ -15,6 +14,7 @@ const SavedRecipes = ({ recipes }) => {
         <Link to={`/recipe/${recipe.id}`} className="recipe-link-btn saved-btn">
           <button className="btn saved">View Recipe</button>
         </Link>
+        <button className="btn saved" onClick={() => deleteRecipe(recipe.id)}>Remove</button>
       </div>
     )
   })
@@ -28,7 +28,8 @@ const SavedRecipes = ({ recipes }) => {
 }
 
 SavedRecipes.propTypes = {
-  recipes: PropTypes.array
+  recipes: PropTypes.array,
+  deleteRecipe: PropTypes.func
 }
 
 export default SavedRecipes;

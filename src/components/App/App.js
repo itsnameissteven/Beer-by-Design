@@ -11,7 +11,7 @@ import './App.css';
 
 function App() {
   const [beerList, setBeerList] = useState([]);
-  const [savedRecipes, setSavedRecipe] = useState([])
+  const [savedRecipes, setSavedRecipes] = useState([])
 
   useEffect(() => {
     getAPIs().then(data => setBeerList(data))
@@ -20,7 +20,7 @@ function App() {
   const saveRecipe = (newRecipe) => {
     const isSaved = savedRecipes.some( recipe => recipe.id === newRecipe.id)
     if(!isSaved) {
-      setSavedRecipe([...savedRecipes, {
+      setSavedRecipes([...savedRecipes, {
         id: newRecipe.id,
         name: newRecipe.name,
         abv: newRecipe.abv,
@@ -28,6 +28,11 @@ function App() {
         ibu: newRecipe.ibu
       }])
     }
+  }
+
+  const deleteSavedRecipe = (id) => {
+    const newRecipeList = savedRecipes.filter(recipe => recipe.id !== id )
+    setSavedRecipes(newRecipeList)
   }
 
   return (
@@ -59,7 +64,7 @@ function App() {
           return <Recipe id={id} saveRecipe={saveRecipe}/>
         }} />
         <Route path="/saved-recipes" render={() => {
-          return <SavedRecipes recipes={savedRecipes}/>
+          return <SavedRecipes recipes={savedRecipes} deleteRecipe={deleteSavedRecipe}/>
         }} />
       </Switch> 
     </div>
