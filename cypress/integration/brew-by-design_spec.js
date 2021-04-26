@@ -14,7 +14,6 @@ describe('Brew by Design landing page', () => {
   it('Should have a navigation bar', () => {
     cy.get('nav').contains('Brew by Design')
       .get('nav').contains('Home')
-      .get('nav').contains('How to brew')
       .get('nav').contains('Saved Recipes')
   });
 
@@ -107,7 +106,6 @@ describe('Recipe page', () => {
   it('Should have a navigation bar', () => {
     cy.get('nav').contains('Brew by Design')
       .get('nav').contains('Home')
-      .get('nav').contains('How to brew')
       .get('nav').contains('Saved Recipes')
   });
 
@@ -138,7 +136,7 @@ describe('Recipe page', () => {
 
   it('Should have an overview of the recipe instructions', () => {
     cy.get('.target').contains('volume')
-      .get('.target').contains('20')
+      .get('.target').contains('5.3')
       .get('.target').contains('target original gravity')
       .get('.target').contains('1093')
       .get('.target').contains('attenuation level')
@@ -147,8 +145,8 @@ describe('Recipe page', () => {
 
   it('Should have method instructions', () => {
     cy.get('.method'). contains('90min')
-      .get('.method'). contains('65')
-      .get('.method'). contains('19')
+      .get('.method'). contains('149')
+      .get('.method'). contains('66')
   })
 
   it('Should have suggestions on how to pair with food', () => {
@@ -177,15 +175,73 @@ describe('Saving Recipes', () => {
 
   it('Should be able to save a beer', () => {
     cy.get('.saved-recipes__card').contains('Devine Rebel')
-  })
+  });
 
   it('Should be able to travel to the recipe page', () => {
     cy.get('.saved').click()
       .url('http://localhost:3000/recipe/22')
-  })
+  });
 
   it('Should be able to remove a beer from saved list', () => {
     cy.get('.delete').click()
       .get('.saved-recipes__card').should('not.exist')
+  });
+})
+
+describe('Error handling', () => {
+  it('Should tell the user when the server is down', () => {
+    cy.intercept( baseURL, {
+        status: 404,
+        body: {message: "404"}
+      })
+    cy.visit('http://localhost:3000/')
+      .get('.error').contains('something went wrong!');
+  });
+
+  it('Should show an error message if you go to the wrong page', () => {
+    cy.fixture('beerData').then((data) => {
+      cy.intercept( baseURL, {
+        status: 200,
+        body: data
+      });
+    });
+    cy.visit('http://localhost:3000/fake-url-doesnt-exist')
+      .get('.error').contains('something went wrong!');
+  });
+
+  it('Should redirect you if you go to the wrong recipe url', () => {
+    cy.fixture('beerData').then((data) => {
+      cy.intercept( baseURL, {
+        status: 200,
+        body: data
+      });
+    });
+    cy.fixture('singleBeer').then((data) => {
+      cy.intercept(baseURL + '/200000',{
+        status: 404,
+        body: {message: "404"}
+      });
+    });
+    cy.visit('http://localhost:3000/recipe/200000')
+      .url('http://localhost:3000/error')
+      .get('.error').contains('something went wrong!');
+  });
+
+  it('Should let you navigate back home', () => {
+    cy.fixture('beerData').then((data) => {
+      cy.intercept( baseURL, {
+        status: 200,
+        body: data
+      });
+    });
+    cy.fixture('singleBeer').then((data) => {
+      cy.intercept(baseURL + '/200000',{
+        status: 404,
+        body: {message: "404"}
+      });
+    });
+      cy.get('.btn').click()
+        .url('http://localhost:3000/')
+        .get('.error').should('not.exist')
   })
 })
