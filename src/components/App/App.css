@@ -22,6 +22,7 @@
 
 .nav-link {
   text-decoration: none;
+  font-weight: 500;
   align-self: end;
   color: white;
   font-size: 22px;
@@ -31,7 +32,7 @@
 
 .active {
   color: #ffbf69;
-  border-bottom: 1px solid #ffbf69;
+  border-bottom: 1px solid #ff9f1c;
 }
 
 @media screen and (max-width: 1000px) {
