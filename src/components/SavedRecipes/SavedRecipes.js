@@ -14,17 +14,18 @@ const SavedRecipes = ({ recipes, deleteRecipe }) => {
         <Link to={`/recipe/${recipe.id}`} className="recipe-link-btn saved-btn">
           <button className="btn saved">View Recipe</button>
         </Link>
-        <button className="btn saved" onClick={() => deleteRecipe(recipe.id)}>Remove</button>
+        <button className="btn delete" onClick={() => deleteRecipe(recipe.id)}>Remove</button>
       </div>
     )
-  })
+  });
+
   return (
     <div className="saved-recipes">
       <h1>Your Saved Recipes</h1>
       {recipeList}
     </div>
 
-  )
+  );
 }
 
 SavedRecipes.propTypes = {

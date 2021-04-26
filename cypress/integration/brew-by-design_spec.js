@@ -155,3 +155,37 @@ describe('Recipe page', () => {
     cy.get('.food-pairings').contains('gingerbread biscuits')
   })
 })
+
+describe('Saving Recipes', () => {
+  beforeEach(() => {
+    cy.fixture('beerData').then((data) => {
+      cy.intercept( baseURL, {
+        status: 200,
+        body: data
+      })
+    })
+    cy.fixture('singleBeer').then((data) => {
+      cy.intercept(baseURL + '/22',{
+        status: 200,
+        body: data
+      })
+    });
+    cy.visit('http://localhost:3000/recipe/22')
+      .get('.recipe-btn').click()
+      .get('a[href="/saved-recipes"]').click()
+  });
+
+  it('Should be able to save a beer', () => {
+    cy.get('.saved-recipes__card').contains('Devine Rebel')
+  })
+
+  it('Should be able to travel to the recipe page', () => {
+    cy.get('.saved').click()
+      .url('http://localhost:3000/recipe/22')
+  })
+
+  it('Should be able to remove a beer from saved list', () => {
+    cy.get('.delete').click()
+      .get('.saved-recipes__card').should('not.exist')
+  })
+})

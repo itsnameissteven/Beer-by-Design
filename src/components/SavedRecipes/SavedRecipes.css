@@ -41,7 +41,8 @@
   align-self: center;
 }
 
-.saved {
+.saved,
+.delete {
   margin-left: 5px;
 }
 
@@ -65,7 +66,8 @@
     font-size: 14px;
   }
 
-  .saved {
+  .saved,
+  .delete {
     font-size: 10px;
     padding: 6px 10px;
   }
