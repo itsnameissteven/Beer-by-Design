@@ -32,7 +32,7 @@ function App() {
       <SearchBar />
       <Switch>
         <Route path="/" exact render={() => { 
-            return <FeaturedBeers beerList={beerList.slice(0, 3)} />
+            return <FeaturedBeers beerList={beerList.slice(19)} />
         }}  
         />
         <Route path="/search/:search" render={({ match }) => {

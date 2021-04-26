@@ -1,6 +1,6 @@
 .target {
-  background-color: aquamarine;
-  height: 100%;
+  background-color: #cbf3f0;
+  line-height: 1.8;
   padding: 10px;
   display: flex;
   flex-direction: column;

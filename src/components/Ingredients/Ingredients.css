@@ -1,8 +1,6 @@
 .ingredients {
   padding: 10px;
-  background-color: pink;
-  max-width: 500px;
-  min-width: 400px;
+  background-color: #ffbf69;
 }
 
 .malt__row,

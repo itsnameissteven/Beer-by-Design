@@ -13,8 +13,8 @@
   background-color: #fff;
   border-radius: 50px;
   width: 80%;
-  max-width: 700px;
   height: 50px;
+  max-width: 700px;
   padding: 0 15px;
   overflow: hidden;
 }
@@ -46,4 +46,19 @@
 
 .search__btn {
   display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .search {
+    height: 50px;
+  }
+
+  .search__container {
+    width: 90%;
+    height: 30px;
+  }
+
+  .search__icon {
+    font-size: 20px;
+  }
 }
