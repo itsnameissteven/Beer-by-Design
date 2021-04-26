@@ -8,7 +8,7 @@ import FoodPairings from '../FoodPairings/FoodParings';
 import BrewTips from '../BrewTips/BrewTips';
 import './Recipe.css';
 
-const Recipe = ({ id }) => {
+const Recipe = ({ id, saveRecipe }) => {
   const [recipe, setRecipe] = useState({})
 
   useEffect(() => {
@@ -21,7 +21,12 @@ const Recipe = ({ id }) => {
 
   return (
     <div className="recipe">
-      <h1 className="recipe__name">{recipe.name}</h1>
+      <div className="recipe__header-container">
+        <h1 className="recipe__name">{recipe.name}</h1>
+        <button className="btn recipe-btn" onClick={() => saveRecipe(recipe)}>
+          Save Recipe
+        </button>
+      </div>
       <div className="recipe__stats">
         <p className="recipe__tagline">{recipe.tagline}</p>
         <p className="recipe__abv">ABV<br />{recipe.abv}%</p>
@@ -62,6 +67,7 @@ const Recipe = ({ id }) => {
 
 Recipe.propTypes = {
   id: PropTypes.string,
+  saveRecipe: PropTypes.func 
 }
 
 export default Recipe;

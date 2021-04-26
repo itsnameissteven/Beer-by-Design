@@ -62,7 +62,7 @@
   grid-column: 2;
 }
 
-.beer-card__btn {
+.btn {
   padding: 10px 15px;
   border-radius: 50px;
   outline: none;
@@ -70,15 +70,15 @@
   border: 2px solid #ff9f1c;
 }
 
-.beer-card__btn:hover {
+.btn:hover {
   transform: translateY(-1px);
   box-shadow: -2px 3px 9px rgba(0, 0, 0, 0.2);
 }
-.beer-card__btn:active {
+.btn:active {
   transform: translateY(2px);
   box-shadow: inset -2px 3px 9px rgba(0, 0, 0, 0.2);
 }
-.beer-card__btn:focus {
+.btn:focus {
   border: 2px solid #000;
 }
 

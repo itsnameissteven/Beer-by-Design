@@ -12,7 +12,7 @@ const FeaturedBeers = ({ beerList }) => {
         <p className="beer-card__tagline">{beer.tagline}</p>
         <p className="beer-card__description">{beer.description}</p>
         <Link to={`/recipe/${beer.id}`} className="recipe-link-btn">
-        <button className="beer-card__btn">View Recipe</button>
+          <button className="btn">View Recipe</button>
         </Link>
       </div>
     )
