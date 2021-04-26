@@ -13,7 +13,7 @@ const TargetData = (props) => {
         <p>{volume?.value}</p>
       </div>
       <div className="target__data">
-        <p className='target__data__name'>Boil volume</p>
+        <p className='target__data__name'>boil volume</p>
         <p>{boilVolume?.value}</p>
       </div>
       <div className="target__data">
@@ -25,11 +25,11 @@ const TargetData = (props) => {
         <p>{srm}</p>
       </div>
       <div className="target__data">
-        <p className='target__data__name'>target original Gravity</p>
+        <p className='target__data__name'>target original gravity</p>
         <p>{originalGravity}</p>
       </div>
       <div className="target__data">
-        <p className='target__data__name'>target final Gravity</p>
+        <p className='target__data__name'>target final gravity</p>
         <p>{finalGravity}</p>
       </div>
       <div className="target__data">

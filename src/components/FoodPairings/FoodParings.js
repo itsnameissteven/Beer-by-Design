@@ -16,7 +16,7 @@ const FoodPairings = ({pairings}) => {
         <div className="icon">
         <GiKnifeFork className="icon__img"/>
         </div>
-        <h3 className="method__header">MASH</h3>
+        <h3 className="method__header">Food Pairings</h3>
       </div>
       {foodPairings}
     </div>
