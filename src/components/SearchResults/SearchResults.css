@@ -54,3 +54,13 @@
 .beer-stats__number {
   font-weight: bold;
 }
+
+@media screen and (max-width: 700px) {
+  .search-results {
+    padding: 10px 5px;
+  }
+
+  .no-results {
+    font-size: 22px;
+  }
+}

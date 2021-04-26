@@ -1,8 +1,17 @@
 .featured-beers {
   grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.featured-beers__header {
+  margin-left: 20px;
+  grid-column: 1/-1;
 }
 
 .img-container {
+  grid-column: 1/-1;
+
   position: relative;
   width: 90vw;
   height: 45vw;
@@ -12,6 +21,7 @@
   justify-content: center;
   align-items: center;
   background: linear-gradient(0deg, #00000093 30%, #b1b1b144 100%);
+  margin-bottom: 20px;
 }
 
 .hero-img {
@@ -29,6 +39,7 @@
 }
 
 .beer-card {
+  grid-column: span 1;
   display: grid;
   grid-template-columns: 30% 1fr;
   grid-template-rows: min-content min-content auto;
@@ -47,21 +58,51 @@
 }
 
 .beer-card__description,
-.beer-card__btn {
+.recipe-link-btn {
   grid-column: 2;
+}
+
+.beer-card__btn {
+  padding: 10px 15px;
+  border-radius: 50px;
+  outline: none;
+  background-color: #fdb813;
+  border: 2px solid #ffe674;
+}
+
+.beer-card__btn:hover {
+  transform: translateY(-1px);
+  box-shadow: -2px 3px 9px rgba(0, 0, 0, 0.2);
+}
+.beer-card__btn:active {
+  transform: translateY(2px);
+  box-shadow: inset -2px 3px 9px rgba(0, 0, 0, 0.2);
+}
+.beer-card__btn:focus {
+  border: 2px solid #000;
 }
 
 .beer-card__description {
   grid-row: 1/3;
 }
 
-.beer-card__btn {
+.recipe-link-btn {
   align-self: end;
   justify-self: end;
+}
+
+@media screen and (max-width: 1000px) {
+  .featured-beers {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-width: 700px) {
   .hero-img-mantra {
     font-size: 18px;
+  }
+
+  .beer-card {
+    margin: 5px;
   }
 }
