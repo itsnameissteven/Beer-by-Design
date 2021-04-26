@@ -9,6 +9,7 @@
 }
 
 .no-results {
+  grid-column: 1/ -1;
   text-align: center;
 }
 
@@ -58,6 +59,7 @@
 @media screen and (max-width: 700px) {
   .search-results {
     padding: 10px 5px;
+    grid-template-columns: 1fr;
   }
 
   .no-results {

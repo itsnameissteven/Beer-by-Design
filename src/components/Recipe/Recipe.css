@@ -2,6 +2,7 @@
   grid-column: 1/-1;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
   padding: 20px;
   margin-bottom: 20px;
 }
@@ -55,7 +56,6 @@
 
 .recipe__ingredients {
   grid-row: span 2;
-  margin: 0 auto;
 }
 
 .recipe__target-data {
@@ -65,4 +65,55 @@
 .recipe__method {
   grid-row: 3;
   grid-column: 3;
+}
+
+@media screen and (max-width: 1000px) {
+  .recipe {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .recipe__name {
+    font-size: 40px;
+  }
+
+  .recipe__tagline {
+    font-size: 25px;
+  }
+
+  .recipe__about {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .recipe__method {
+    grid-column: 1;
+    grid-row: 5;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .recipe {
+    grid-template-columns: 1fr;
+    padding: 5px;
+  }
+
+  .recipe__name {
+    font-size: 25px;
+  }
+
+  .recipe__tagline {
+    font-size: 20px;
+  }
+
+  .recipe__ingredients,
+  .recipe__food-pairings {
+    width: unset;
+    margin: unset;
+  }
+
+  .recipe__abv,
+  .recipe__srm,
+  .recipe__ibu {
+    font-size: 12px;
+  }
 }
