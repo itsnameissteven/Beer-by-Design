@@ -18,7 +18,7 @@ const FeaturedBeers = ({ beerList }) => {
     )
   })
 
-  return( 
+  return ( 
     <div className="featured-beers">
       <div className="img-container">
         <img className="hero-img" src={homebrew} alt="homebrew beer on a table"/>
