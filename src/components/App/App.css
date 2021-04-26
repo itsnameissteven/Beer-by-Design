@@ -10,7 +10,7 @@
   justify-content: start;
   align-content: end;
   height: 100px;
-  background-color: rgb(114, 114, 114);
+  background-color: rgb(139, 139, 139);
 }
 
 .nav__header {
@@ -30,8 +30,8 @@
 }
 
 .active {
-  color: #fdb813;
-  border-bottom: 1px solid #fdb813;
+  color: #ffbf69;
+  border-bottom: 1px solid #ffbf69;
 }
 
 @media screen and (max-width: 1000px) {
