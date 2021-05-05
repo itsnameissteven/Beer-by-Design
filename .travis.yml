@@ -6,6 +6,3 @@ notifications:
 script:
   - npm test
   - npm run build
-deploy:
-  provider: heroku
-  app: beer-by-design
