@@ -7,7 +7,7 @@
 
 ## Deployed Site
 
-[Rancid Tomatillos](https://rancid-tomatillos-max.herokuapp.com/)
+[Brew by Design](https://beer-by-design.herokuapp.com/)
 
 ## Table of Contents
 
